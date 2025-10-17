@@ -2,25 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Rajeev Ketha — Senior Salesforce Lead</title>
   <meta name="description" content="Portfolio of Rajeev Ketha — Senior Salesforce Lead. Apex, LWC, CPQ/CLM, OmniStudio, Integrations, Architecture." />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root{
-      --bg:#030406; --card:#0b0f13; --accent:#06b6d4; --glow:rgba(6,182,212,0.2);
+    /* Global Reset for cross-device consistency */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    body{background:var(--bg);color:#e6eef6;font-family:Inter,ui-sans-serif,system-ui;}
-    .card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);}
-    .neon{color:var(--accent);text-shadow:0 0 12px var(--glow);}
-    .reveal{opacity:0;transform:translateY(10px);transition:all .6s ease;}
-    .reveal.in{opacity:1;transform:none;}
-    .badge{padding:6px 10px;border-radius:6px;background:rgba(6,182,212,0.1);border:1px solid rgba(6,182,212,0.25);color:var(--accent);font-size:.85rem;display:inline-block;margin:4px;transition:transform .3s ease, box-shadow .3s ease;}
-    .badge:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 0 16px var(--glow);}
+
+    /* Theme variables */
+    :root {
+      --bg: #030406;
+      --card: #0b0f13;
+      --accent: #06b6d4;
+      --glow: rgba(6,182,212,0.2);
+    }
+
+    /* Base layout */
+    body {
+      background: var(--bg);
+      color: #e6eef6;
+      font-family: Inter, ui-sans-serif, system-ui;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    /* Fullscreen background canvas */
+    canvas#bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      background: var(--bg);
+    }
+
+    /* Card components */
+    .card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius: 1rem;
+      box-sizing: border-box;
+    }
+
+    /* Neon glow text */
+    .neon {
+      color: var(--accent);
+      text-shadow: 0 0 12px var(--glow);
+    }
+
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.6s ease;
+    }
+    .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Badge styles */
+    .badge {
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: rgba(6,182,212,0.1);
+      border: 1px solid rgba(6,182,212,0.25);
+      color: var(--accent);
+      font-size: 0.85rem;
+      display: inline-block;
+      margin: 4px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .badge:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 0 16px var(--glow);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+      nav a {
+        display: inline-block;
+        margin: 0 6px;
+      }
+      .card {
+        padding: 1.2rem;
+      }
+    }
   </style>
 </head>
+
 <body>
+  <!-- Animated background -->
   <canvas id="bg-canvas"></canvas>
+
+  <!-- Main container -->
   <div class="relative z-10 max-w-6xl mx-auto px-6 py-12">
+    <!-- Header section -->
     <header class="flex items-center justify-between mb-8">
       <div>
         <h1 class="text-3xl font-extrabold neon">Rajeev Ketha</h1>
@@ -36,40 +128,47 @@
     </header>
 
     <main>
-      <section id="about" class="card p-8 rounded-2xl mb-8 reveal">
+      <!-- About -->
+      <section id="about" class="card p-8 mb-8 reveal">
         <p class="text-sm text-teal-200/60 mb-3">// Senior Salesforce Lead — Architecture · CPQ · Integrations</p>
         <h2 class="text-2xl font-bold mb-2">I build quote-to-cash and contract systems that scale</h2>
-        <p class="text-gray-300">Over 10 years delivering enterprise Salesforce solutions for Nokia, GE Healthcare, and McKesson. I design resilient CPQ/CLM architectures, lead teams through integrations, and drive automation that reduces cycle times.</p>
+        <p class="text-gray-300">
+          Over 10 years delivering enterprise Salesforce solutions for Nokia, GE Healthcare, and McKesson.
+          I design resilient CPQ/CLM architectures, lead teams through integrations, and drive automation that reduces cycle times.
+        </p>
       </section>
 
+      <!-- Projects -->
       <section id="projects" class="mb-10">
         <h3 class="text-lg text-gray-300 mb-4">Highlighted Projects</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <article class="card p-6 rounded-xl reveal">
+          <article class="card p-6 reveal">
             <h4 class="font-semibold">Nokia — Contract Lifecycle Optimization</h4>
-            <p class="text-gray-400 mt-2">Implemented Apttus CLM workflows, DocuSign integration, and versioning automation reducing manual review effort by 35%.</p>
+            <p class="text-gray-400 mt-2">Implemented Apttus CLM workflows, DocuSign integration, and automation reducing manual review by 35%.</p>
           </article>
-          <article class="card p-6 rounded-xl reveal">
+          <article class="card p-6 reveal">
             <h4 class="font-semibold">GE Healthcare — CPQ Sales Acceleration</h4>
-            <p class="text-gray-400 mt-2">Led CPQ rollout integrated with ERP pricing; reduced quote cycle time from 30m to under 10m using guided selling rules.</p>
+            <p class="text-gray-400 mt-2">Led CPQ rollout with ERP integration; reduced quote cycle time from 30m to under 10m.</p>
           </article>
-          <article class="card p-6 rounded-xl reveal">
+          <article class="card p-6 reveal">
             <h4 class="font-semibold">McKesson — Patient Management Modernization</h4>
-            <p class="text-gray-400 mt-2">Developed Salesforce modules for patient eligibility, compliance, and drug distribution under REMS programs.</p>
+            <p class="text-gray-400 mt-2">Developed Salesforce modules for eligibility, compliance, and REMS drug distribution.</p>
           </article>
-          <article class="card p-6 rounded-xl reveal">
-            <h4 class="font-semibold">E‑Commerce Integrations</h4>
-            <p class="text-gray-400 mt-2">Unified B2B/B2C shopping flows integrating Avalara tax and CyberSource payment systems within Apttus platform.</p>
+          <article class="card p-6 reveal">
+            <h4 class="font-semibold">E-Commerce Integrations</h4>
+            <p class="text-gray-400 mt-2">Unified B2B/B2C flows integrating Avalara tax and CyberSource payment systems.</p>
           </article>
         </div>
       </section>
 
-      <section id="experience" class="mb-10 card p-6 rounded-xl reveal">
+      <!-- Experience -->
+      <section id="experience" class="card p-6 mb-10 reveal">
         <h3 class="text-lg font-semibold neon mb-3">Experience</h3>
-        <p class="text-gray-300">(Placeholder) Add more roles and details here later, highlighting leadership, architecture decisions, and business outcomes.</p>
+        <p class="text-gray-300">(Placeholder) Add leadership roles, architecture decisions, and key business outcomes here.</p>
       </section>
 
-      <section id="certs" class="mb-10 card p-6 rounded-xl reveal text-center">
+      <!-- Certifications -->
+      <section id="certs" class="card p-6 mb-10 text-center reveal">
         <h3 class="text-xl font-semibold neon mb-4">Certifications & Achievements</h3>
         <div class="flex flex-wrap justify-center">
           <span class="badge">Salesforce Platform Developer II</span>
@@ -82,20 +181,82 @@
         </div>
       </section>
 
-      <section id="contact" class="card p-6 rounded-xl reveal text-center">
+      <!-- Contact -->
+      <section id="contact" class="card p-6 text-center reveal">
         <h3 class="font-semibold mb-3">Contact</h3>
         <p class="text-gray-300">Reach out for collaboration, consulting, or leadership roles.</p>
         <p class="mt-2 text-gray-400">Email: <span class="font-medium">rajeev.ketha@gmail.com</span></p>
         <p class="text-gray-400">LinkedIn: <a href="#" class="neon hover:underline">linkedin.com/in/rajeevketha</a></p>
-        <p class="text-gray-400">GitHub: <a href="https://github.com/rajeevketha" class="neon hover:underline" target="_blank">github.com/rajeevketha</a></p>
+        <p class="text-gray-400">GitHub: <a href="https://github.com/rajeevketha" target="_blank" class="neon hover:underline">github.com/rajeevketha</a></p>
       </section>
 
+      <!-- Footer -->
       <footer class="text-center text-sm text-gray-500 py-8">© 2025 Rajeev Ketha</footer>
     </main>
   </div>
 
+  <!-- JS for animation and reveal effects -->
   <script>
-    const canvas=document.getElementById('bg-canvas');const ctx=canvas.getContext('2d');let w,h,particles=[];function resize(){w=canvas.width=innerWidth;h=canvas.height=innerHeight;}window.addEventListener('resize',resize);resize();function rand(min,max){return Math.random()*(max-min)+min}function init(){particles=[];for(let i=0;i<80;i++){particles.push({x:rand(0,w),y:rand(0,h),r:rand(.6,1.8),vx:rand(-.15,.15),vy:rand(-.05,.05),a:rand(.03,.1)})}}init();function draw(){ctx.clearRect(0,0,w,h);for(const p of particles){p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=w;if(p.x>w)p.x=0;if(p.y<0)p.y=h;if(p.y>h)p.y=0;ctx.beginPath();ctx.fillStyle='rgba(6,182,212,'+p.a+')';ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();}requestAnimationFrame(draw)}draw();const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.1});document.querySelectorAll('.reveal').forEach(n=>io.observe(n));
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let w, h, particles = [];
+
+    // Resize canvas to fit window
+    function resize() {
+      w = canvas.width = innerWidth;
+      h = canvas.height = innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Helper: random number
+    function rand(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    // Create particle objects
+    function init() {
+      particles = [];
+      for (let i = 0; i < 80; i++) {
+        particles.push({
+          x: rand(0, w),
+          y: rand(0, h),
+          r: rand(0.6, 1.8),
+          vx: rand(-0.15, 0.15),
+          vy: rand(-0.05, 0.05),
+          a: rand(0.03, 0.1)
+        });
+      }
+    }
+    init();
+
+    // Draw particles
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+      for (const p of particles) {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0) p.x = w;
+        if (p.x > w) p.x = 0;
+        if (p.y < 0) p.y = h;
+        if (p.y > h) p.y = 0;
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(6,182,212,${p.a})`;
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      requestAnimationFrame(draw);
+    }
+    draw();
+
+    // Reveal animation on scroll
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('in');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   </script>
 </body>
 </html>
