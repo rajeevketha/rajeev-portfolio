@@ -1,10 +1,17 @@
-# Rajeev Ketha Portfolio
+# Rajeev Ketha Portfolio (GitHub Pages Version)
 
-## Instructions to Upload to GitHub Pages
+## 🚀 How to publish on macOS (no coding needed)
+1. Go to https://github.com/new and create a **public repo** named `rajeevketha.github.io`.
+2. Click **Add file → Upload files**.
+3. Drag & drop the following files:
+   - `index.html`
+   - `Rajeev_Ketha_Resume.pdf`
+   - `README.md`
+4. Scroll down and click **Commit changes**.
+5. Go to **Settings → Pages**, choose:
+   - Branch: `main`
+   - Folder: `/ (root)`
+6. Click **Save**. Within 1–2 minutes, your site will go live at:
+   👉 https://rajeevketha.github.io
 
-1. Create a new **public** GitHub repository named `YOUR_GITHUB_USERNAME.github.io`.
-2. Upload `index.html` and `Rajeev_Ketha_Resume.pdf` to the root of the repository.
-3. Go to **Settings → Pages**, select branch `main` and folder `/ (root)`, then click **Save**.
-4. Your site will be live at: https://YOUR_GITHUB_USERNAME.github.io
-
-You can update `index.html` anytime and push changes to update your live site.
+You can replace the placeholder PDF anytime or edit the HTML directly online.
