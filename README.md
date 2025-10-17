@@ -1,17 +1,34 @@
-# Rajeev Ketha Portfolio (GitHub Pages Version)
+# Rajeev Ketha Portfolio (Complete Version)
 
-## 🚀 How to publish on macOS (no coding needed)
-1. Go to https://github.com/new and create a **public repo** named `rajeevketha.github.io`.
-2. Click **Add file → Upload files**.
-3. Drag & drop the following files:
-   - `index.html`
-   - `Rajeev_Ketha_Resume.pdf`
-   - `README.md`
-4. Scroll down and click **Commit changes**.
-5. Go to **Settings → Pages**, choose:
-   - Branch: `main`
-   - Folder: `/ (root)`
-6. Click **Save**. Within 1–2 minutes, your site will go live at:
-   👉 https://rajeevketha.github.io
+### 🚀 Deployment Guide
 
-You can replace the placeholder PDF anytime or edit the HTML directly online.
+1. **Extract ZIP Contents**
+   - Unzip this folder and open it on your computer.
+
+2. **Create a GitHub Repository**
+   - Visit https://github.com/new
+   - Repository name: `rajeevketha.github.io`
+   - Keep it *public* and click **Create Repository**.
+
+3. **Upload Files**
+   - Upload all files (`index.html`, `rk-icon.jpg`, `rk-favicon-32x32.jpg`, and `README.md`) into the repository root.
+
+4. **Enable GitHub Pages**
+   - Go to **Settings → Pages**
+   - Under *Build and Deployment*, select `Deploy from Branch`
+   - Branch: `main`, Folder: `/ (root)`
+   - Click **Save**
+
+5. **Access Your Portfolio**
+   - After 1–2 minutes, your site will be live at: `https://rajeevketha.github.io`
+
+6. **Updating the Portfolio**
+   - To modify details, open `index.html` in VS Code or any text editor.
+   - Commit and push changes — they’ll appear instantly.
+
+---
+
+💼 **Rajeev Ketha**
+Salesforce Technical Lead | Conga CPQ & CLM | LWC Architect  
+📧 **rajeev.ketha@gmail.com**  
+🔗 **[linkedin.com/in/rajeev-ketha](https://www.linkedin.com/in/rajeev-ketha/)**
