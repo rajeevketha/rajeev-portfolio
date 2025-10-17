@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rajeev Ketha | Salesforce Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajeev Ketha | Salesforce Technical Lead</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="ICON_GMAIL.jpg" />
+
+  <!-- Social Preview -->
+  <meta property="og:title" content="Rajeev Ketha — Salesforce Technical Lead" />
+  <meta property="og:description" content="Conga CPQ & CLM | LWC Architect | AI Learner" />
+  <meta property="og:image" content="social-preview.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     html { scroll-behavior: smooth; }
     .fade-in { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
@@ -12,123 +25,89 @@
     .nav-icon:hover { filter: drop-shadow(0 0 8px rgba(56,189,248,.5)); }
   </style>
 </head>
-<body class="bg-black text-gray-200 antialiased">
-  <!-- Hero -->
+
+<body class="bg-black text-gray-200 font-sans">
+
+  <!-- Hero Section -->
   <section class="text-center py-16 md:py-20 bg-gradient-to-r from-gray-900 via-black to-gray-900">
-    <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight fade-in">Bhargava Rajeev Ketha</h1>
-    <p class="mt-3 text-lg md:text-xl text-blue-400 font-light fade-in"> <span class="text-white">Salesforce Technical Lead</span> | Conga CPQ &amp; CLM Expert | LWC Architect</p>
-    <p class="mt-4 text-gray-400 text-sm md:text-base max-w-2xl mx-auto fade-in">
-      Designing enterprise-grade Salesforce solutions that balance scalability, automation, and great UX.
+    <h1 class="text-3xl md:text-5xl font-bold text-white mb-3 tracking-tight leading-tight">Bhargava Rajeev Ketha</h1>
+    <p class="text-base md:text-xl text-blue-400 font-light">
+      <span class="text-white">Salesforce Technical Lead</span> | Conga CPQ & CLM Expert | LWC Architect
+    </p>
+    <p class="mt-3 text-gray-400 text-sm md:text-base max-w-2xl mx-auto">
+      Passionate about building scalable Salesforce solutions with performance, automation, and intuitive UX.
     </p>
   </section>
 
-  <!-- Sticky Icon Nav -->
-  <nav class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur border-y border-gray-800">
-    <div class="max-w-5xl mx-auto px-6">
-      <ul class="flex justify-center gap-8 md:gap-12 py-3">
-        <li><a href="#about" class="flex flex-col items-center text-gray-400 hover:text-sky-400 nav-icon">
-          <!-- user icon -->
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20 21a8 8 0 0 0-16 0"/>
-            <circle cx="12" cy="7" r="4"/>
-          </svg>
-          <span class="text-[11px] mt-1">About</span>
-        </a></li>
-        <li><a href="#projects" class="flex flex-col items-center text-gray-400 hover:text-sky-400 nav-icon">
-          <!-- code icon -->
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="m16 18 6-6-6-6"/><path d="M8 6 2 12l6 6"/>
-          </svg>
-          <span class="text-[11px] mt-1">Projects</span>
-        </a></li>
-        <li><a href="#experience" class="flex flex-col items-center text-gray-400 hover:text-sky-400 nav-icon">
-          <!-- briefcase -->
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M2 13h20"/>
-          </svg>
-          <span class="text-[11px] mt-1">Experience</span>
-        </a></li>
-        <li><a href="#certifications" class="flex flex-col items-center text-gray-400 hover:text-sky-400 nav-icon">
-          <!-- award -->
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M8 21v-4l4-2 4 2v4"/><circle cx="12" cy="7" r="4"/>
-          </svg>
-          <span class="text-[11px] mt-1">Certificates</span>
-        </a></li>
-        <li><a href="#resume" class="flex flex-col items-center text-gray-400 hover:text-sky-400 nav-icon">
-          <!-- file-text -->
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/>
-          </svg>
-          <span class="text-[11px] mt-1">Resume</span>
-        </a></li>
-      </ul>
-    </div>
+  <!-- Sticky Navigation -->
+  <nav class="sticky top-0 z-50 flex justify-center gap-8 md:gap-10 py-3 bg-gray-900 border-t border-b border-gray-800 backdrop-blur-sm bg-opacity-90">
+    <a href="#about" class="flex flex-col items-center text-gray-400 hover:text-sky-400 transition nav-icon">👤<span class="text-xs mt-1">About</span></a>
+    <a href="#projects" class="flex flex-col items-center text-gray-400 hover:text-sky-400 transition nav-icon">💻<span class="text-xs mt-1">Projects</span></a>
+    <a href="#experience" class="flex flex-col items-center text-gray-400 hover:text-sky-400 transition nav-icon">🧳<span class="text-xs mt-1">Experience</span></a>
+    <a href="#certifications" class="flex flex-col items-center text-gray-400 hover:text-sky-400 transition nav-icon">🏆<span class="text-xs mt-1">Certificates</span></a>
+    <a href="#resume" class="flex flex-col items-center text-gray-400 hover:text-sky-400 transition nav-icon">📄<span class="text-xs mt-1">Resume</span></a>
   </nav>
 
-  <!-- About -->
-  <section id="about" class="max-w-5xl mx-auto px-6 py-14">
-    <h2 class="text-3xl font-semibold mb-6 text-sky-400 border-b border-gray-800 pb-2 fade-in">About Me</h2>
-    <div class="text-gray-300 leading-relaxed space-y-5">
-      <p class="fade-in">
-        I’m <strong>Rajeev Ketha</strong>, a seasoned <strong>Salesforce Technical Lead</strong> with 10+ years architecting and delivering scalable enterprise CRM &amp; CPQ solutions.
-        I specialize in <strong>Conga CPQ/CLM, Turbo Pricing,</strong> and <strong>Lightning Web Components (LWC)</strong>, building solutions that streamline approvals and automate complex quoting workflows.
-      </p>
-      <p class="fade-in">Beyond coding, I mentor teams, optimize architectures for performance, and balance clean code with user-focused design.</p>
+  <!-- About Section -->
+  <section id="about" class="max-w-5xl mx-auto px-6 py-14 md:py-16 scroll-mt-24">
+    <h2 class="text-3xl font-semibold mb-6 text-sky-400 border-b border-gray-700 pb-2">About Me</h2>
+    <p class="text-gray-300 leading-relaxed">
+      I’m <strong>Rajeev Ketha</strong>, a <strong>Salesforce Technical Lead</strong> with over a decade of experience designing scalable enterprise CRM and CPQ solutions. My expertise spans <strong>Conga CPQ/CLM, Turbo Pricing,</strong> and <strong>Lightning Web Components (LWC)</strong>.
+    </p>
+    <p class="text-gray-300 leading-relaxed mt-4">
+      I focus on crafting high-performing, maintainable solutions that streamline business processes, enhance automation, and deliver seamless user experiences.
+    </p>
+    <p class="text-gray-300 leading-relaxed mt-4">
+      Beyond coding, I’m passionate about mentoring teams, leading solution design, and driving innovation across Salesforce ecosystems.
+    </p>
+
+    <!-- Social Preview Comparison -->
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 text-center">
+        <img src="social-preview.jpg" alt="Portfolio Aqua Preview" class="rounded-xl mb-3 mx-auto w-full" />
+        <p class="text-cyan-300 text-sm mt-2">Portfolio Match (Electric Aqua)</p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 text-center">
+        <img src="social-preview.jpg" alt="Portfolio White Preview" class="rounded-xl mb-3 mx-auto w-full" />
+        <p class="text-gray-300 text-sm mt-2">Simple (White)</p>
+      </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="max-w-5xl mx-auto px-6 py-14 bg-gray-900 rounded-2xl shadow-xl">
-    <h2 class="text-3xl font-semibold mb-6 text-sky-400 border-b border-gray-800 pb-2 fade-in">Featured Projects</h2>
+  <section id="projects" class="max-w-5xl mx-auto px-6 py-14 bg-gray-900 rounded-2xl shadow-lg scroll-mt-24">
+    <h2 class="text-3xl font-semibold mb-6 text-sky-400 border-b border-gray-700 pb-2">Featured Projects</h2>
     <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-gray-800 p-6 rounded-xl hover:shadow-lg hover:shadow-sky-400/20 transition fade-in">
+      <div class="bg-gray-800 p-6 rounded-xl hover:shadow-lg hover:shadow-sky-400/20 transition">
         <h3 class="text-xl font-semibold text-white mb-2">Turbo Pricing Optimization (Conga CPQ)</h3>
-        <p class="text-gray-400 text-sm">Architected optimized Turbo Pricing &amp; Config models improving quoting performance by ~40%.</p>
+        <p class="text-gray-400 text-sm">Architected optimized Turbo Pricing & Config models improving quoting performance by ~40%.</p>
       </div>
-      <div class="bg-gray-800 p-6 rounded-xl hover:shadow-lg hover:shadow-sky-400/20 transition fade-in">
+      <div class="bg-gray-800 p-6 rounded-xl hover:shadow-lg hover:shadow-sky-400/20 transition">
         <h3 class="text-xl font-semibold text-white mb-2">Ramp Line API Enhancement</h3>
-        <p class="text-gray-400 text-sm">Redesigned API to handle bulk processing, removing governor limit issues and boosting throughput.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-xl hover:shadow-lg hover:shadow-sky-400/20 transition fade-in">
-        <h3 class="text-xl font-semibold text-white mb-2">Service Console Customization</h3>
-        <p class="text-gray-400 text-sm">Advanced Service Cloud Console features with Omni-Channel/CTI for better agent productivity.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-xl hover:shadow-lg hover:shadow-sky-400/20 transition fade-in">
-        <h3 class="text-xl font-semibold text-white mb-2">LWC Component Library</h3>
-        <p class="text-gray-400 text-sm">Reusable LWC library for CPQ/CLM flows that improved scalability and reduced dev time.</p>
+        <p class="text-gray-400 text-sm">Redesigned API to handle bulk processing, eliminating governor limit issues and boosting throughput.</p>
       </div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="max-w-5xl mx-auto px-6 py-14">
-    <h2 class="text-3xl font-semibold mb-6 text-sky-400 border-b border-gray-800 pb-2 fade-in">Professional Experience</h2>
-    <div class="space-y-8">
-      <div class="bg-gray-900 p-6 rounded-xl hover:shadow-xl transition fade-in">
+  <section id="experience" class="max-w-5xl mx-auto px-6 py-14 scroll-mt-24">
+    <h2 class="text-3xl font-semibold mb-6 text-sky-400 border-b border-gray-700 pb-2">Professional Experience</h2>
+    <div class="space-y-10">
+      <div class="bg-gray-900 p-6 rounded-xl hover:shadow-xl transition">
         <h3 class="text-2xl font-bold text-white">Senior Technical Lead – Forsys Inc.</h3>
         <ul class="list-disc list-inside text-gray-300 space-y-2 mt-2">
-          <li>Architected enterprise Salesforce CPQ &amp; Conga CLM solutions for global clients.</li>
+          <li>Architected enterprise Salesforce CPQ and Conga CLM solutions for global clients.</li>
           <li>Directed solution design, performance tuning, and cross-functional collaboration.</li>
-          <li>Implemented scalable Turbo Pricing &amp; Config logic across multiple orgs.</li>
-        </ul>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-xl hover:shadow-xl transition fade-in">
-        <h3 class="text-2xl font-bold text-white">Senior Salesforce Developer</h3>
-        <ul class="list-disc list-inside text-gray-300 space-y-2 mt-2">
-          <li>Built scalable Apex &amp; LWC components for CPQ/CLM processes.</li>
-          <li>Automated key workflows reducing manual tasks by ~35%.</li>
-          <li>Led QA coordination ensuring smooth deployments and adoption.</li>
         </ul>
       </div>
     </div>
   </section>
 
   <!-- Certifications -->
-  <section id="certifications" class="max-w-5xl mx-auto px-6 py-14 bg-gray-900 rounded-2xl shadow-xl">
-    <h2 class="text-3xl font-semibold mb-6 text-sky-400 border-b border-gray-800 pb-2 fade-in">Certifications</h2>
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-300 fade-in">
-      <li>Salesforce Certified Sharing &amp; Visibility Architect</li>
+  <section id="certifications" class="max-w-5xl mx-auto px-6 py-14 bg-gray-900 rounded-2xl shadow-lg scroll-mt-24">
+    <h2 class="text-3xl font-semibold mb-6 text-sky-400 border-b border-gray-700 pb-2">Certifications</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-300">
+      <li>Salesforce Certified Sharing & Visibility Architect</li>
       <li>Salesforce Certified Platform Developer II</li>
       <li>Salesforce Certified Platform Developer I</li>
       <li>Salesforce Certified Platform App Builder</li>
@@ -137,66 +116,28 @@
   </section>
 
   <!-- Resume -->
-  <section id="resume" class="max-w-5xl mx-auto px-6 py-16 text-center">
-    <h2 class="text-3xl font-semibold mb-4 text-sky-400 border-b border-gray-800 pb-2 fade-in">Resume</h2>
-    <p class="text-gray-400 mb-6 fade-in" id="resume-note">Resume coming soon — updated version will be available shortly.</p>
-    <a id="resume-link"
-       href="#"
-       aria-disabled="true"
-       class="inline-flex items-center gap-2 text-gray-500 border border-gray-700 px-5 py-3 rounded-lg cursor-not-allowed select-none fade-in">
-      <!-- file-text icon -->
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/>
-      </svg>
-      View Resume
+  <section id="resume" class="max-w-5xl mx-auto px-6 py-16 text-center scroll-mt-24">
+    <h2 class="text-3xl font-semibold mb-6 text-sky-400 border-b border-gray-700 pb-2">Resume</h2>
+    <p class="text-gray-400 mb-6">Resume coming soon — updated version will be available shortly.</p>
+    <a class="inline-flex items-center gap-2 text-gray-500 border border-gray-700 px-5 py-3 rounded-lg cursor-not-allowed select-none">
+      📄 View Resume
     </a>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="max-w-5xl mx-auto px-6 py-14">
-    <h2 class="text-3xl font-semibold mb-6 text-sky-400 border-b border-gray-800 pb-2 fade-in">Contact</h2>
-    <div class="grid md:grid-cols-3 gap-6 fade-in">
-      <div class="bg-gray-900 rounded-xl p-5">
-        <div class="text-sm text-gray-400">Email</div>
-        <a href="mailto:rajeev.ketha@gmail.com" class="text-white mt-1 inline-block hover:text-sky-400">rajeev.ketha@gmail.com</a>
-      </div>
-      <div class="bg-gray-900 rounded-xl p-5">
-        <div class="text-sm text-gray-400">LinkedIn</div>
-        <a href="https://www.linkedin.com/in/rajeev-ketha" class="text-white mt-1 inline-block hover:text-sky-400" >linkedin.com/in/rajeev-ketha</a>
-      </div>
-      <div class="bg-gray-900 rounded-xl p-5">
-        <div class="text-sm text-gray-400">Phone</div>
-        <a href="tel:+19452436265" class="text-white mt-1 inline-block hover:text-sky-400">+1 945 243 6265</a>
-      </div>
+  <section id="contact" class="max-w-5xl mx-auto px-6 py-14 bg-gray-900 rounded-2xl shadow-lg text-center scroll-mt-24">
+    <h2 class="text-3xl font-semibold mb-6 text-sky-400 border-b border-gray-700 pb-2">Contact</h2>
+    <div class="flex flex-col md:flex-row justify-center gap-6 text-gray-300">
+      <a href="mailto:rajeev.ketha@gmail.com" class="hover:text-sky-400 transition">📧 rajeev.ketha@gmail.com</a>
+      <a href="tel:+19452436265" class="hover:text-sky-400 transition">📞 +1 945 243 6265</a>
+      <a href="https://www.linkedin.com/in/rajeev-ketha/" target="_self" class="hover:text-sky-400 transition">💼 linkedin.com/in/rajeev-ketha</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="text-center py-10 text-gray-500">
-    <p>© 2025 Bhargava Rajeev Ketha • Built on GitHub Pages</p>
+    <p>© 2025 Bhargava Rajeev Ketha | Built on GitHub Pages</p>
   </footer>
 
-  <script>
-    // Reveal on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    // Resume enablement when file exists
-    (async () => {
-      try {
-        const res = await fetch('Rajeev_Ketha_Resume.pdf', { method: 'HEAD' });
-        if (res.ok) {
-          const link = document.getElementById('resume-link');
-          const note = document.getElementById('resume-note');
-          link.href = 'Rajeev_Ketha_Resume.pdf';
-          link.setAttribute('aria-disabled', 'false');
-          link.className = 'inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 border border-sky-500 hover:border-sky-400 px-5 py-3 rounded-lg transition';
-          note.textContent = 'You can view or download my professional resume below.';
-        }
-      } catch (_) { /* ignore */ }
-    })();
-  </script>
 </body>
 </html>
