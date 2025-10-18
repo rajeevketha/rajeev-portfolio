@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rajeev Ketha | Salesforce Technical Lead</title>
+  <link rel="icon" type="image/jpeg" href="rk-favicon-32x32.jpg" />
+  <meta property="og:title" content="Rajeev Ketha — Salesforce Technical Lead" />
+  <meta property="og:description" content="Conga CPQ & CLM • LWC Architect • Performance-focused Salesforce solutions" />
+  <meta property="og:image" content="rk-icon.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root { --teal:#2bc3d8; --charcoal:#0b0c0e; --steel1:#1c2a3a; --steel2:#0a0c10; --dur-desktop:.8s; --dur-mobile:.5s; }
+    html{ scroll-behavior:smooth; } body{ background:var(--charcoal); color:#e5e7eb; opacity:0; transition:opacity .6s ease; }
+    body.ready{ opacity:1; }
+    .side-grad:before,.side-grad:after{ content:""; position:fixed; top:0; bottom:0; width:18vw; pointer-events:none; z-index:0; background:linear-gradient(90deg, rgba(28,42,58,.18), rgba(10,12,16,0)); }
+    .side-grad:before{ left:0; } .side-grad:after{ right:0; transform:scaleX(-1); }
+    .wrap-wide{ max-width:80rem; }
+    .dk-gradient{ background:linear-gradient(135deg, var(--steel1) 0%, var(--steel2) 100%); }
+    .reveal{ opacity:0; transform:translateY(22px); transition:opacity var(--dur-desktop) ease, transform var(--dur-desktop) ease; will-change:opacity,transform; }
+    .reveal.show{ opacity:1; transform:none; }
+    @media (max-width:768px){ .reveal{ transform:none; transition:opacity var(--dur-mobile) ease; } }
+    .rk-logo{ width:72px; height:72px; border-radius:9999px; border:1px solid var(--teal); box-shadow:0 0 12px rgba(43,195,216,.20); object-fit:cover; }
+    @media (min-width:768px){ .rk-logo{ width:100px; height:100px; } }
+    nav.stickybar{ position:sticky; top:0; z-index:50; background:rgba(15,16,19,.86); backdrop-filter:blur(6px); border-top:1px solid #111827; border-bottom:1px solid #111827; transition:box-shadow .3s ease; }
+    nav.stickybar.scrolled{ box-shadow:0 6px 16px rgba(0,0,0,.35); }
+    .nav-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; } .nav-wrap::-webkit-scrollbar{ display:none; } .nav-list{ min-width:max-content; }
+    .nav-icon:hover svg{ stroke:var(--teal); transform:scale(1.1) translateY(-2px); transition:all .2s; } svg{ transition:all .2s; }
+    .card{ background:#0f1115; border:1px solid #0f172a; transition:box-shadow .25s ease, border-color .25s ease, transform .25s ease; }
+    .card:hover{ border-color:rgba(43,195,216,.45); box-shadow:0 8px 24px rgba(43,195,216,.10); transform:translateY(-2px); }
+    .ticon{ position:relative; display:inline-flex; align-items:center; justify-content:center; }
+    .ticon::after{ content:attr(data-tip); position:absolute; bottom:125%; left:50%; transform:translateX(-50%); padding:6px 8px; font-size:12px; color:var(--teal); background:rgba(43,195,216,.08); border:1px solid rgba(43,195,216,.35); border-radius:8px; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity .18s ease, transform .18s ease; }
+    .ticon:hover::after{ opacity:1; transform:translateX(-50%) translateY(-2px); }
+    .backtop{ position:fixed; right:1.25rem; bottom:1.25rem; z-index:60; width:44px; height:44px; border-radius:9999px; border:1.5px solid var(--teal); background:transparent; display:grid; place-items:center; color:var(--teal); box-shadow:0 0 0 rgba(43,195,216,0); opacity:0; transform:translateY(8px); transition:opacity .25s ease, transform .25s ease, box-shadow .25s ease; }
+    .backtop:hover{ box-shadow:0 0 12px rgba(43,195,216,.25); } .backtop.show{ opacity:1; transform:translateY(0); }
+  </style>
+</head>
+<body class="side-grad">
+  <header class="dk-gradient">
+    <div class="wrap-wide mx-auto px-6 py-14 md:py-20">
+      <div class="flex items-center gap-4 md:gap-6 reveal" data-stagger="0">
+        <img src="rk-icon.jpg" alt="RK logo" class="rk-logo" />
+        <div>
+          <h1 class="text-3xl md:text-6xl font-bold text-white tracking-tight leading-tight">Rajeev Ketha</h1>
+          <p class="text-base md:text-xl text-[color:var(--teal)]/90"><span class="text-white">Salesforce Technical Lead</span> • Conga CPQ & CLM • LWC Architect</p>
+          <p class="mt-3 text-gray-400 text-sm md:text-base max-w-3xl">Building scalable Salesforce solutions with performance, automation, and elegant UX.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="stickybar">
+    <div class="nav-wrap">
+      <ul class="nav-list wrap-wide mx-auto px-6 flex gap-8 md:gap-10 py-3 justify-center">
+        <li class="nav-icon"><a href="#about" class="flex flex-col items-center text-gray-400 hover:text-[color:var(--teal)]"><i data-lucide="user"></i><span class="text-[11px] mt-1">About</span></a></li>
+        <li class="nav-icon"><a href="#projects" class="flex flex-col items-center text-gray-400 hover:text-[color:var(--teal)]"><i data-lucide="code"></i><span class="text-[11px] mt-1">Projects</span></a></li>
+        <li class="nav-icon"><a href="#experience" class="flex flex-col items-center text-gray-400 hover:text-[color:var(--teal)]"><i data-lucide="briefcase"></i><span class="text-[11px] mt-1">Experience</span></a></li>
+        <li class="nav-icon"><a href="#certifications" class="flex flex-col items-center text-gray-400 hover:text-[color:var(--teal)]"><i data-lucide="award"></i><span class="text-[11px] mt-1">Certificates</span></a></li>
+        <li class="nav-icon"><a href="#resume" class="flex flex-col items-center text-gray-400 hover:text-[color:var(--teal)]"><i data-lucide="file-text"></i><span class="text-[11px] mt-1">Resume</span></a></li>
+        <li class="nav-icon"><a href="#contact" class="flex flex-col items-center text-gray-400 hover:text-[color:var(--teal)]"><i data-lucide="mail"></i><span class="text-[11px] mt-1">Contact</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="about" class="wrap-wide mx-auto px-6 py-12 md:py-16">
+    <h2 class="reveal text-2xl md:text-3xl font-semibold mb-6 text-[color:var(--teal)] border-b border-gray-800 pb-2" data-stagger="0">About Me</h2>
+    <div class="reveal text-gray-300 leading-relaxed space-y-5" data-stagger="1">
+      <p>I’m <strong>Rajeev Ketha</strong>, a <strong>Salesforce Technical Lead</strong> with 10+ years designing scalable enterprise CRM & CPQ solutions across Conga CPQ/CLM, Turbo Pricing, and Lightning Web Components (LWC).</p>
+      <p>I craft high-performing, maintainable architectures that streamline business processes, enhance automation, and deliver intuitive user experiences.</p>
+      <p>Beyond coding, I mentor teams, lead solution design, and drive platform innovation.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="wrap-wide mx-auto px-6 py-12 md:py-16">
+    <h2 class="reveal text-2xl md:text-3xl font-semibold mb-6 text-[color:var(--teal)] border-b border-gray-800 pb-2" data-stagger="0">Featured Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="reveal card p-6 rounded-xl" data-stagger="1">
+        <h3 class="text-xl font-semibold text-white mb-2">Turbo Pricing Optimization (Conga CPQ)</h3>
+        <p class="text-gray-400 text-sm">Optimized Turbo Pricing & Config models improving quoting performance by ~40%.</p>
+      </div>
+      <div class="reveal card p-6 rounded-xl" data-stagger="2">
+        <h3 class="text-xl font-semibold text-white mb-2">Ramp Line API Enhancement</h3>
+        <p class="text-gray-400 text-sm">Redesigned API to handle bulk processing, removing governor limit bottlenecks and boosting throughput.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="wrap-wide mx-auto px-6 py-12 md:py-16">
+    <h2 class="reveal text-2xl md:text-3xl font-semibold mb-6 text-[color:var(--teal)] border-b border-gray-800 pb-2" data-stagger="0">Professional Experience</h2>
+    <div class="reveal space-y-8" data-stagger="1">
+      <div class="card p-6 rounded-xl">
+        <h3 class="text-2xl font-bold text-white">Senior Technical Lead – Forsys Inc.</h3>
+        <ul class="list-disc list-inside text-gray-300 space-y-2 mt-2">
+          <li>Architected enterprise Salesforce CPQ & Conga CLM solutions for global clients.</li>
+          <li>Directed solution design, performance tuning, and cross-functional collaboration.</li>
+          <li>Implemented scalable Turbo Pricing & Config logic across multiple orgs.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="wrap-wide mx-auto px-6 py-12 md:py-16">
+    <h2 class="reveal text-2xl md:text-3xl font-semibold mb-6 text-[color:var(--teal)] border-b border-gray-800 pb-2" data-stagger="0">Certifications</h2>
+    <ul class="reveal grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-300" data-stagger="1">
+      <li>Salesforce Certified Sharing & Visibility Architect</li>
+      <li>Salesforce Certified Platform Developer II</li>
+      <li>Salesforce Certified Platform Developer I</li>
+      <li>Salesforce Certified Platform App Builder</li>
+      <li>Salesforce Certified Administrator</li>
+    </ul>
+  </section>
+
+  <section id="resume" class="wrap-wide mx-auto px-6 py-12 md:py-16 text-center">
+    <h2 class="reveal text-2xl md:text-3xl font-semibold mb-4 text-[color:var(--teal)] border-b border-gray-800 pb-2 inline-block" data-stagger="0">Resume</h2>
+    <p class="reveal text-gray-400 mb-6" data-stagger="1">Resume coming soon — updated version will be available shortly.</p>
+    <a class="reveal inline-flex items-center gap-2 text-gray-400 border border-gray-700 px-5 py-3 rounded-lg cursor-not-allowed select-none" data-stagger="2">
+      <i data-lucide="file-text"></i> View Resume
+    </a>
+  </section>
+
+  <section id="contact" class="wrap-wide mx-auto px-6 py-12 md:py-16">
+    <h2 class="reveal text-2xl md:text-3xl font-semibold mb-6 text-[color:var(--teal)] border-b border-gray-800 pb-2" data-stagger="0">Contact</h2>
+    <div class="reveal flex flex-col md:flex-row justify-center gap-6 text-gray-300" data-stagger="1">
+      <a href="mailto:rajeev.ketha@gmail.com" class="ticon hover:text-[color:var(--teal)]" data-tip="Email"><i data-lucide="mail"></i></a>
+      <a href="tel:+19452436265" class="ticon hover:text-[color:var(--teal)]" data-tip="Call"><i data-lucide="phone"></i></a>
+      <a href="https://www.linkedin.com/in/rajeev-ketha/" target="_self" class="ticon hover:text-[color:var(--teal)]" data-tip="LinkedIn"><i data-lucide="linkedin"></i></a>
+    </div>
+  </section>
+
+  <footer class="wrap-wide mx-auto px-6 text-sm text-gray-500 pb-16">
+    <div class="flex items-center justify-between gap-4 flex-col md:flex-row">
+      <p>© 2025 Rajeev Ketha • Built on GitHub Pages</p>
+      <div class="flex items-center gap-4">
+        <a href="mailto:rajeev.ketha@gmail.com" class="ticon hover:text-[color:var(--teal)]" data-tip="Email"><i data-lucide="mail"></i></a>
+        <a href="tel:+19452436265" class="ticon hover:text-[color:var(--teal)]" data-tip="Call"><i data-lucide="phone"></i></a>
+        <a href="https://www.linkedin.com/in/rajeev-ketha/" target="_self" class="ticon hover:text-[color:var(--teal)]" data-tip="LinkedIn"><i data-lucide="linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backTop" aria-label="Back to top" class="backtop" title="Back to top"><i data-lucide="arrow-up"></i></button>
+
+  <script>
+    lucide.createIcons();
+    window.addEventListener('load', () => { document.body.classList.add('ready'); });
+
+    // Reveal on scroll
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const delayIndex = parseInt(el.getAttribute('data-stagger') || '0', 10);
+          el.style.transitionDelay = (0.2 * delayIndex) + 's';
+          el.classList.add('show');
+          obs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // Nav shadow
+    const nav = document.querySelector('nav.stickybar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 16) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+    }, { passive: true });
+
+    // Back-to-top show/hide
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 260) backTop.classList.add('show'); else backTop.classList.remove('show');
+    }, { passive: true });
+
+    // Smooth ease-in-out scroll-to-top (0.8s)
+    backTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      const start = window.scrollY; const duration = 800; const startTime = performance.now();
+      const easeInOut = (t) => t < 0.5 ? 2*t*t : -1 + (4 - 2*t)*t;
+      const step = (now) => {
+        const elapsed = now - startTime; const progress = Math.min(elapsed / duration, 1);
+        const eased = easeInOut(progress); window.scrollTo(0, start * (1 - eased));
+        if (elapsed < duration) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  </script>
+</body>
+</html>
