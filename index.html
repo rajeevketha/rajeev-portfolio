@@ -36,6 +36,37 @@
     .ticon:hover::after{ opacity:1; transform:translateX(-50%) translateY(-2px); }
     .backtop{ position:fixed; right:1.25rem; bottom:1.25rem; z-index:60; width:44px; height:44px; border-radius:9999px; border:1.5px solid var(--teal); background:transparent; display:grid; place-items:center; color:var(--teal); box-shadow:0 0 0 rgba(43,195,216,0); opacity:0; transform:translateY(8px); transition:opacity .25s ease, transform .25s ease, box-shadow .25s ease; }
     .backtop:hover{ box-shadow:0 0 12px rgba(43,195,216,.25); } .backtop.show{ opacity:1; transform:translateY(0); }
+    .cert-item {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-item:hover {
+  background-color: rgba(43, 195, 216, 0.05);
+  box-shadow: 0 0 10px rgba(43, 195, 216, 0.1);
+}
+
+.cert-item:hover .badge,
+.cert-item:hover .issued {
+  display: inline;
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.badge,
+.issued {
+  opacity: 0;
+  transform: translateY(3px);
+  transition: opacity 0.35s ease-in-out, transform 0.3s ease-in-out;
+  height: 35px;
+}
+
+.badge.hidden,
+.issued.hidden {
+  display: none;
+}
+
   </style>
 </head>
 <body class="side-grad">
@@ -102,16 +133,93 @@
     </div>
   </section>
 
-  <section id="certifications" class="wrap-wide mx-auto px-6 py-12 md:py-16">
-    <h2 class="reveal text-2xl md:text-3xl font-semibold mb-6 text-[color:var(--teal)] border-b border-gray-800 pb-2" data-stagger="0">Certifications</h2>
-    <ul class="reveal grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-300" data-stagger="1">
-      <li>Salesforce Certified Sharing & Visibility Architect</li>
-      <li>Salesforce Certified Platform Developer II</li>
-      <li>Salesforce Certified Platform Developer I</li>
-      <li>Salesforce Certified Platform App Builder</li>
-      <li>Salesforce Certified Administrator</li>
-    </ul>
-  </section>
+  <section
+  id="certifications"
+  class="max-w-5xl mx-auto px-6 py-14 md:py-16 scroll-mt-20"
+>
+  <h2
+    class="text-3xl font-semibold mb-6 text-blue-400 border-b border-gray-700 pb-2"
+  >
+    Certificates
+  </h2>
+
+  <div class="space-y-4 text-gray-300 leading-relaxed">
+    <!-- Platform Administrator -->
+    <div class="cert-item flex items-center justify-between hover-glow transition">
+      <span>Salesforce Certified Platform Administrator</span>
+      <div class="cert-hover flex items-center gap-2">
+        <img
+          src="badges/admin.png"
+          alt="Admin Badge"
+          class="badge hidden"
+        />
+        <span class="issued hidden text-sm text-gray-400">
+          Issued: Mar 2025
+        </span>
+      </div>
+    </div>
+
+    <!-- Platform App Builder -->
+    <div class="cert-item flex items-center justify-between hover-glow transition">
+      <span>Salesforce Certified Platform App Builder</span>
+      <div class="cert-hover flex items-center gap-2">
+        <img
+          src="badges/appbuilder.png"
+          alt="App Builder Badge"
+          class="badge hidden"
+        />
+        <span class="issued hidden text-sm text-gray-400">
+          Issued: Mar 2021
+        </span>
+      </div>
+    </div>
+
+    <!-- Platform Developer I -->
+    <div class="cert-item flex items-center justify-between hover-glow transition">
+      <span>Salesforce Certified Platform Developer I</span>
+      <div class="cert-hover flex items-center gap-2">
+        <img
+          src="badges/developer1.png"
+          alt="Developer I Badge"
+          class="badge hidden"
+        />
+        <span class="issued hidden text-sm text-gray-400">
+          Issued: Apr 2025
+        </span>
+      </div>
+    </div>
+
+    <!-- Platform Developer II -->
+    <div class="cert-item flex items-center justify-between hover-glow transition">
+      <span>Salesforce Certified Platform Developer II</span>
+      <div class="cert-hover flex items-center gap-2">
+        <img
+          src="badges/developer2.png"
+          alt="Developer II Badge"
+          class="badge hidden"
+        />
+        <span class="issued hidden text-sm text-gray-400">
+          Issued: Mar 2021
+        </span>
+      </div>
+    </div>
+
+    <!-- Sharing & Visibility Architect -->
+    <div class="cert-item flex items-center justify-between hover-glow transition">
+      <span>Salesforce Certified Sharing & Visibility Architect</span>
+      <div class="cert-hover flex items-center gap-2">
+        <img
+          src="badges/sharing_vis_arch.png"
+          alt="Sharing & Visibility Architect Badge"
+          class="badge hidden"
+        />
+        <span class="issued hidden text-sm text-gray-400">
+          Issued: Mar 2025
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
 
   <section id="resume" class="wrap-wide mx-auto px-6 py-12 md:py-16 text-center">
     <h2 class="reveal text-2xl md:text-3xl font-semibold mb-4 text-[color:var(--teal)] border-b border-gray-800 pb-2 inline-block" data-stagger="0">Resume</h2>
