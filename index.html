@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rajeev Ketha | Salesforce Technical Lead</title>
-  <link rel="icon" type="image/jpeg" href="rk-favicon-32x32.jpg" />
-  <meta property="og:title" content="Rajeev Ketha — Salesforce Technical Lead" />
-  <meta property="og:description" content="Conga CPQ & CLM • LWC Architect • Performance-focused Salesforce solutions" />
+  <title>Rajeev Ketha | Senior Salesforce Technical Lead</title>
+    <meta property="og:title" content="Rajeev Ketha — Senior Salesforce Technical Lead" />
+  <meta property="og:description" content="Senior Salesforce Technical Lead • Conga CPQ & CLM • Enterprise Architecture" />
   <meta property="og:image" content="rk-icon.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -14,7 +13,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     :root { --teal:#2bc3d8; --charcoal:#0b0c0e; --steel1:#1c2a3a; --steel2:#0a0c10; --dur-desktop:.8s; --dur-mobile:.5s; }
-    html{ scroll-behavior:smooth; } body{ background:var(--charcoal); color:#e5e7eb; opacity:0; transition:opacity .6s ease; }
+    html{ scroll-behavior:smooth; } body{ background:var(--charcoal); color:#e5e7eb; opacity:1; transition:opacity .6s ease; }
     body.ready{ opacity:1; }
     .side-grad:before,.side-grad:after{ content:""; position:fixed; top:0; bottom:0; width:18vw; pointer-events:none; z-index:0; background:linear-gradient(90deg, rgba(28,42,58,.18), rgba(10,12,16,0)); }
     .side-grad:before{ left:0; } .side-grad:after{ right:0; transform:scaleX(-1); }
@@ -23,8 +22,25 @@
     .reveal{ opacity:0; transform:translateY(22px); transition:opacity var(--dur-desktop) ease, transform var(--dur-desktop) ease; will-change:opacity,transform; }
     .reveal.show{ opacity:1; transform:none; }
     @media (max-width:768px){ .reveal{ transform:none; transition:opacity var(--dur-mobile) ease; } }
-    .rk-logo{ width:72px; height:72px; border-radius:9999px; border:1px solid var(--teal); box-shadow:0 0 12px rgba(43,195,216,.20); object-fit:cover; }
-    @media (min-width:768px){ .rk-logo{ width:100px; height:100px; } }
+    
+    .eyebrow{ display:inline-flex; align-items:center; gap:.5rem; padding:.35rem .8rem; border:1px solid rgba(43,195,216,.26); border-radius:9999px; color:#d1d5db; background:rgba(43,195,216,.05); font-size:.8rem; letter-spacing:.02em; }
+    .hero-links a{ width:42px; height:42px; border-radius:9999px; border:1px solid #1f2937; display:inline-flex; align-items:center; justify-content:center; color:#9ca3af; transition:border-color .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease; }
+    .hero-links a:hover{ color:var(--teal); border-color:rgba(43,195,216,.5); transform:translateY(-2px); box-shadow:0 8px 20px rgba(43,195,216,.12); }
+    .hero-stats{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; max-width:42rem; }
+    .stat-chip{ background:rgba(255,255,255,.02); border:1px solid #17202d; border-radius:1rem; padding:1rem 1.1rem; }
+    .stat-chip .value{ color:#fff; font-size:1.1rem; font-weight:700; }
+    .stat-chip .label{ color:#9ca3af; font-size:.82rem; margin-top:.15rem; }
+    .timeline { position:relative; margin-left:.75rem; padding-left:2.5rem; }
+    .timeline::before { content:""; position:absolute; left:10px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom, rgba(43,195,216,.55), rgba(43,195,216,.10)); }
+    .timeline-item { position:relative; margin-bottom:1.5rem; }
+    .timeline-item:last-child { margin-bottom:0; }
+    .timeline-dot { position:absolute; left:-2.1rem; top:1.55rem; width:14px; height:14px; border-radius:9999px; background:var(--teal); border:3px solid #0b0c0e; box-shadow:0 0 0 4px rgba(43,195,216,.12), 0 0 14px rgba(43,195,216,.25); }
+    .timeline-date { display:inline-flex; align-items:center; white-space:nowrap; font-size:.875rem; color:#cbd5e1; border:1px solid rgba(43,195,216,.25); background:rgba(43,195,216,.06); padding:.35rem .7rem; border-radius:9999px; }
+    .stack-line{ display:flex; flex-wrap:wrap; gap:.45rem; margin:.9rem 0 1rem; }
+    .stack-pill{ font-size:.75rem; color:#cbd5e1; border:1px solid #243142; background:rgba(255,255,255,.02); padding:.3rem .55rem; border-radius:9999px; }
+    .section-intro{ color:#9ca3af; max-width:48rem; margin:-.25rem 0 1.75rem; }
+    @media (max-width:768px){ .reveal{ transform:none; transition:opacity var(--dur-mobile) ease; } .hero-stats{ grid-template-columns:1fr; } .timeline{ margin-left:0; padding-left:1.75rem; } .timeline::before{ left:6px; } .timeline-dot{ left:-1.45rem; width:12px; height:12px; top:1.35rem; } }
+
     nav.stickybar{ position:sticky; top:0; z-index:50; background:rgba(15,16,19,.86); backdrop-filter:blur(6px); border-top:1px solid #111827; border-bottom:1px solid #111827; transition:box-shadow .3s ease; }
     nav.stickybar.scrolled{ box-shadow:0 6px 16px rgba(0,0,0,.35); }
     .nav-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; } .nav-wrap::-webkit-scrollbar{ display:none; } .nav-list{ min-width:max-content; }
@@ -69,15 +85,32 @@
 
   </style>
 </head>
-<body class="side-grad">
+<body class="side-grad" style="background:#0b0c0e;color:#e5e7eb;">
   <header class="dk-gradient">
     <div class="wrap-wide mx-auto px-6 py-14 md:py-20">
-      <div class="flex items-center gap-4 md:gap-6 reveal" data-stagger="0">
-        <img src="rk-icon.jpg" alt="RK logo" class="rk-logo" />
-        <div>
-          <h1 class="text-3xl md:text-6xl font-bold text-white tracking-tight leading-tight">Rajeev Ketha</h1>
-          <p class="text-base md:text-xl text-[color:var(--teal)]/90"><span class="text-white">Salesforce Technical Lead</span> • Conga CPQ & CLM • LWC Architect</p>
-          <p class="mt-3 text-gray-400 text-sm md:text-base max-w-3xl">Building scalable Salesforce solutions with performance, automation, and elegant UX.</p>
+      <div class="reveal" data-stagger="0">
+        <span class="eyebrow"><i data-lucide="sparkles"></i> Senior Salesforce Technical Lead</span>
+        <h1 class="mt-5 text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight">Rajeev Ketha</h1>
+        <p class="mt-4 text-base md:text-xl text-[color:var(--teal)]/90"><span class="text-white">Salesforce Architecture</span> • Conga CPQ &amp; CLM • Enterprise Integrations</p>
+        <p class="mt-4 text-gray-400 text-sm md:text-base max-w-3xl">Designing scalable Salesforce solutions for quote-to-cash, Service Cloud, automation, and enterprise platforms with a strong focus on performance, maintainability, and business impact.</p>
+        <div class="hero-links mt-6 flex items-center gap-3">
+          <a href="mailto:rajeev.ketha@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+          <a href="tel:+16826821272" aria-label="Phone"><i data-lucide="phone"></i></a>
+          <a href="https://www.linkedin.com/in/rajeev-ketha/" target="_self" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        </div>
+        <div class="hero-stats mt-8">
+          <div class="stat-chip">
+            <div class="value">10+ Years</div>
+            <div class="label">Salesforce and enterprise delivery experience</div>
+          </div>
+          <div class="stat-chip">
+            <div class="value">CPQ / CLM</div>
+            <div class="label">Deep experience in Conga quote-to-cash platforms</div>
+          </div>
+          <div class="stat-chip">
+            <div class="value">Lead to Architect</div>
+            <div class="label">Hands-on technical leadership with delivery ownership</div>
+          </div>
         </div>
       </div>
     </div>
@@ -99,42 +132,270 @@
   <section id="about" class="wrap-wide mx-auto px-6 py-12 md:py-16">
     <h2 class="reveal text-2xl md:text-3xl font-semibold mb-6 text-[color:var(--teal)] border-b border-gray-800 pb-2" data-stagger="0">About Me</h2>
     <div class="reveal text-gray-300 leading-relaxed space-y-5" data-stagger="1">
-      <p>I’m <strong>Rajeev Ketha</strong>, a <strong>Salesforce Technical Lead</strong> with 10+ years designing scalable enterprise CRM & CPQ solutions across Conga CPQ/CLM, Turbo Pricing, and Lightning Web Components (LWC).</p>
-      <p>I craft high-performing, maintainable architectures that streamline business processes, enhance automation, and deliver intuitive user experiences.</p>
-      <p>Beyond coding, I mentor teams, lead solution design, and drive platform innovation.</p>
+      <p>I’m <strong>Rajeev Ketha</strong>, a <strong>Senior Salesforce Technical Lead</strong> with 10+ years of experience delivering enterprise solutions across Salesforce, Conga CPQ/CLM, Service Cloud, and integrations.</p>
+      <p>I specialize in translating complex business requirements into scalable architecture, high-performance implementations, and maintainable platforms using Apex, LWC, automation, and API-based integrations.</p>
+      <p>My work spans solution design, technical leadership, quote-to-cash transformation, pricing optimization, and enterprise system modernization for global clients.</p>
     </div>
   </section>
 
   <section id="projects" class="wrap-wide mx-auto px-6 py-12 md:py-16">
     <h2 class="reveal text-2xl md:text-3xl font-semibold mb-6 text-[color:var(--teal)] border-b border-gray-800 pb-2" data-stagger="0">Featured Projects</h2>
-    <div class="grid md:grid-cols-2 gap-8">
+    <p class="reveal section-intro" data-stagger="1">Enterprise programs selected from my delivery experience across CPQ, CLM, Service Cloud, healthcare, and ecommerce integrations.</p>
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
       <div class="reveal card p-6 rounded-xl" data-stagger="1">
-        <h3 class="text-xl font-semibold text-white mb-2">Hitachi Vantara - Conga CPQ(RLP)</h3>
-        <p class="text-gray-400 text-sm">As a Salesforce Technical Lead, I led the end-to-end implementation of Conga CPQ integrated with Turbo Pricing and the Conga Advantage Platform to modernize and accelerate Hitachi Vantara’s quote-to-cash process.
-
-The project involved highly complex product modeling, handling configurations averaging over 2,000 product lines and carts exceeding 5,000 line items. I architected scalable solutions to support large data volumes, optimized pricing performance, and enhanced the user experience across quoting journeys.
-
-The implementation covered both New and Amend user journeys, with a new guided selling flow designed to improve usability, pricing accuracy, and process alignment. Through deep optimization of the Turbo Pricing engine and platform-level enhancements, we achieved over 40% improvement in pricing and quote generation performance, drastically reducing latency and turnaround time.
-
-By leveraging the Conga Advantage Platform’s modern architecture, the solution delivered a robust, efficient, and scalable quote-to-cash ecosystem, empowering sales teams with faster and more reliable quoting capabilities.</p>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <h3 class="text-xl font-semibold text-white">Robinhood — Service Cloud</h3>
+          <span class="timeline-date text-xs">2025–Present</span>
+        </div>
+        <p class="text-[color:var(--teal)] text-sm mb-3">Role: Senior Technical Lead</p>
+        <p class="text-gray-300 text-sm leading-6">Driving Service Cloud delivery for a fast-moving enterprise environment with focus on scalable case management, platform automation, and maintainable architecture.</p>
+        <div class="stack-line">
+          <span class="stack-pill">Service Cloud</span><span class="stack-pill">Apex</span><span class="stack-pill">LWC</span><span class="stack-pill">Automation</span>
+        </div>
+        <ul class="list-disc list-inside text-gray-400 text-sm space-y-2 mt-1">
+          <li>Supporting business-critical service workflows with scalable design.</li>
+          <li>Improving maintainability and delivery speed across Salesforce solutions.</li>
+          <li>Aligning technical implementation with enterprise support operations.</li>
+        </ul>
       </div>
+
       <div class="reveal card p-6 rounded-xl" data-stagger="2">
-        <h3 class="text-xl font-semibold text-white mb-2">NOKIA - Conga CLM</h3>
-        <p class="text-gray-400 text-sm">Redesigned API to handle bulk processing, removing governor limit bottlenecks and boosting throughput.</p>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <h3 class="text-xl font-semibold text-white">Hitachi Vantara — Conga CPQ</h3>
+          <span class="timeline-date text-xs">2023–2025</span>
+        </div>
+        <p class="text-[color:var(--teal)] text-sm mb-3">Role: Senior Technical Lead</p>
+        <p class="text-gray-300 text-sm leading-6">Led a large-scale CPQ transformation using Conga CPQ, Turbo Pricing, and the Conga Advantage Platform to modernize quote-to-cash operations.</p>
+        <div class="stack-line">
+          <span class="stack-pill">Conga CPQ</span><span class="stack-pill">Turbo Pricing</span><span class="stack-pill">Quote-to-Cash</span><span class="stack-pill">Apex</span>
+        </div>
+        <ul class="list-disc list-inside text-gray-400 text-sm space-y-2 mt-1">
+          <li>Supported complex product models averaging 2,000+ lines and carts up to 5,000 lines.</li>
+          <li>Improved pricing and quote generation performance by more than 40%.</li>
+          <li>Delivered new and amend journeys with guided selling and scalable pricing logic.</li>
+        </ul>
+      </div>
+
+      <div class="reveal card p-6 rounded-xl" data-stagger="3">
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <h3 class="text-xl font-semibold text-white">Nokia — Conga CLM</h3>
+          <span class="timeline-date text-xs">2021–2023</span>
+        </div>
+        <p class="text-[color:var(--teal)] text-sm mb-3">Role: Senior Salesforce Developer</p>
+        <p class="text-gray-300 text-sm leading-6">Contributed to contract lifecycle modernization on Salesforce, helping streamline contracting processes through Conga CLM and Lightning-based implementation.</p>
+        <div class="stack-line">
+          <span class="stack-pill">Conga CLM</span><span class="stack-pill">Salesforce</span><span class="stack-pill">Lightning</span><span class="stack-pill">Apex</span>
+        </div>
+        <ul class="list-disc list-inside text-gray-400 text-sm space-y-2 mt-1">
+          <li>Supported contract workflows and platform usability improvements.</li>
+          <li>Worked across CLM process design, customization, and integration touchpoints.</li>
+          <li>Helped strengthen reliability for enterprise contracting operations.</li>
+        </ul>
+      </div>
+
+      <div class="reveal card p-6 rounded-xl" data-stagger="4">
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <h3 class="text-xl font-semibold text-white">GE Healthcare — Apttus CPQ</h3>
+          <span class="timeline-date text-xs">2019–2021</span>
+        </div>
+        <p class="text-[color:var(--teal)] text-sm mb-3">Role: Senior Salesforce Developer</p>
+        <p class="text-gray-300 text-sm leading-6">Delivered Salesforce and Apttus-based solutions to support quoting processes for a complex healthcare enterprise environment.</p>
+        <div class="stack-line">
+          <span class="stack-pill">Apttus CPQ</span><span class="stack-pill">Salesforce</span><span class="stack-pill">Lightning</span><span class="stack-pill">Enterprise Delivery</span>
+        </div>
+        <ul class="list-disc list-inside text-gray-400 text-sm space-y-2 mt-1">
+          <li>Supported product, pricing, and quoting workflows for enterprise sales operations.</li>
+          <li>Contributed to scalable implementation across healthcare-focused business processes.</li>
+          <li>Delivered customizations aligned to performance and maintainability needs.</li>
+        </ul>
+      </div>
+
+      <div class="reveal card p-6 rounded-xl" data-stagger="5">
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <h3 class="text-xl font-semibold text-white">McKesson — Patient Management</h3>
+          <span class="timeline-date text-xs">2017–2019</span>
+        </div>
+        <p class="text-[color:var(--teal)] text-sm mb-3">Role: Senior Salesforce Developer</p>
+        <p class="text-gray-300 text-sm leading-6">Built Salesforce-based patient management capabilities to support drug delivery workflows, provider eligibility, and centralized operations across multiple programs.</p>
+        <div class="stack-line">
+          <span class="stack-pill">Salesforce</span><span class="stack-pill">Healthcare</span><span class="stack-pill">Workflow Automation</span><span class="stack-pill">Data Management</span>
+        </div>
+        <ul class="list-disc list-inside text-gray-400 text-sm space-y-2 mt-1">
+          <li>Implemented applications that streamlined provider and patient eligibility processes.</li>
+          <li>Supported multi-module operations for distributed users and territories.</li>
+          <li>Strengthened business process efficiency through centralized platform design.</li>
+        </ul>
+      </div>
+
+      <div class="reveal card p-6 rounded-xl" data-stagger="6">
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <h3 class="text-xl font-semibold text-white">SysConnect / CEB / WatchGuard — Ecommerce Integrations</h3>
+          <span class="timeline-date text-xs">2015–2017</span>
+        </div>
+        <p class="text-[color:var(--teal)] text-sm mb-3">Role: Developer / Salesforce Developer</p>
+        <p class="text-gray-300 text-sm leading-6">Built Apttus and Salesforce-based ecommerce solutions integrating payments, tax calculation, and shipping to reduce app sprawl and simplify order workflows.</p>
+        <div class="stack-line">
+          <span class="stack-pill">Apttus</span><span class="stack-pill">Avalara</span><span class="stack-pill">CyberSource</span><span class="stack-pill">Integrations</span>
+        </div>
+        <ul class="list-disc list-inside text-gray-400 text-sm space-y-2 mt-1">
+          <li>Integrated tax, payment, and shipping services into reusable commerce solutions.</li>
+          <li>Supported B2B and B2C ecommerce flows with configurable product and cart models.</li>
+          <li>Helped establish a strong foundation in CPQ-style product and pricing systems.</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section id="experience" class="wrap-wide mx-auto px-6 py-12 md:py-16">
     <h2 class="reveal text-2xl md:text-3xl font-semibold mb-6 text-[color:var(--teal)] border-b border-gray-800 pb-2" data-stagger="0">Professional Experience</h2>
-    <div class="reveal space-y-8" data-stagger="1">
-      <div class="card p-6 rounded-xl">
-        <h3 class="text-2xl font-bold text-white">Senior Technical Lead – Forsys Inc.</h3>
-        <ul class="list-disc list-inside text-gray-300 space-y-2 mt-2">
-          <li>Architected enterprise Salesforce CPQ & Conga CLM solutions for global clients.</li>
-          <li>Directed solution design, performance tuning, and cross-functional collaboration.</li>
-          <li>Implemented scalable Turbo Pricing & Config logic across multiple orgs.</li>
-        </ul>
+    <p class="reveal section-intro" data-stagger="1">A career path shaped by hands-on engineering, enterprise delivery, and progressive ownership across Salesforce, CPQ, CLM, and integration-driven programs.</p>
+    <div class="timeline reveal" data-stagger="2">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card rounded-xl p-6">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-white">Senior Technical Lead / Senior Software Engineer</h3>
+              <p class="text-[color:var(--teal)] font-medium">Forsys Inc.</p>
+            </div>
+            <span class="timeline-date">Feb 2025 – Present</span>
+          </div>
+          <p class="text-gray-300 leading-relaxed">Leading Salesforce programs with a strong focus on Service Cloud, enterprise architecture, integrations, and scalable platform delivery for business-critical workflows.</p>
+          <div class="stack-line">
+            <span class="stack-pill">Apex</span><span class="stack-pill">LWC</span><span class="stack-pill">Service Cloud</span><span class="stack-pill">Architecture</span><span class="stack-pill">REST APIs</span>
+          </div>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li>Driving solution design and hands-on delivery across Salesforce implementations.</li>
+            <li>Building scalable components and integrations aligned to enterprise standards.</li>
+            <li>Supporting maintainability, performance, and platform evolution.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card rounded-xl p-6">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-white">Senior Software Engineer</h3>
+              <p class="text-[color:var(--teal)] font-medium">Reliable IT Group Inc.</p>
+            </div>
+            <span class="timeline-date">Feb 2024 – Jan 2025</span>
+          </div>
+          <p class="text-gray-300 leading-relaxed">Delivered enterprise Salesforce solutions across CPQ, CLM, integrations, and automation, with emphasis on reliability and business process efficiency.</p>
+          <div class="stack-line">
+            <span class="stack-pill">Salesforce</span><span class="stack-pill">Conga CPQ</span><span class="stack-pill">CLM</span><span class="stack-pill">Automation</span><span class="stack-pill">Integrations</span>
+          </div>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li>Built scalable APIs and automation frameworks for enterprise workflows.</li>
+            <li>Improved platform performance and system reliability across environments.</li>
+            <li>Supported delivery of customer-oriented business applications end to end.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card rounded-xl p-6">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-white">Senior Technical Lead</h3>
+              <p class="text-[color:var(--teal)] font-medium">Forsys Inc.</p>
+            </div>
+            <span class="timeline-date">Mar 2021 – Feb 2024</span>
+          </div>
+          <p class="text-gray-300 leading-relaxed">Led large-scale Conga CPQ and CLM implementations for enterprise clients, combining hands-on technical delivery with solution leadership.</p>
+          <div class="stack-line">
+            <span class="stack-pill">Conga CPQ</span><span class="stack-pill">Turbo Pricing</span><span class="stack-pill">CLM</span><span class="stack-pill">Quote-to-Cash</span><span class="stack-pill">Leadership</span>
+          </div>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li>Designed pricing, product configuration, and quote-to-cash workflows at scale.</li>
+            <li>Worked closely with architects, SMEs, and business teams to deliver robust solutions.</li>
+            <li>Balanced architecture, implementation, and production support across enterprise programs.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card rounded-xl p-6">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-white">Senior Software Engineer</h3>
+              <p class="text-[color:var(--teal)] font-medium">Tech Mahindra</p>
+            </div>
+            <span class="timeline-date">Jun 2019 – Mar 2021</span>
+          </div>
+          <p class="text-gray-300 leading-relaxed">Built Salesforce applications and integrations that supported business-critical workflows and improved communication across enterprise systems.</p>
+          <div class="stack-line">
+            <span class="stack-pill">Apex</span><span class="stack-pill">Lightning</span><span class="stack-pill">SOAP</span><span class="stack-pill">REST</span><span class="stack-pill">Enterprise Apps</span>
+          </div>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li>Developed Salesforce applications using Apex, Lightning, and integration patterns.</li>
+            <li>Built REST and SOAP services for enterprise system communication.</li>
+            <li>Enhanced performance and reliability of operational workflows.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card rounded-xl p-6">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-white">Senior Salesforce Developer</h3>
+              <p class="text-[color:var(--teal)] font-medium">WilcoSource Technologies Pvt Ltd</p>
+            </div>
+            <span class="timeline-date">Aug 2017 – Feb 2019</span>
+          </div>
+          <p class="text-gray-300 leading-relaxed">Delivered Salesforce solutions for healthcare and enterprise use cases with strong focus on automation, process efficiency, and application stability.</p>
+          <div class="stack-line">
+            <span class="stack-pill">Salesforce</span><span class="stack-pill">Automation</span><span class="stack-pill">Healthcare</span><span class="stack-pill">Apex</span><span class="stack-pill">Process Builder</span>
+          </div>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li>Implemented workflows, approvals, and Apex-driven business processes.</li>
+            <li>Supported data-intensive applications and cross-team delivery needs.</li>
+            <li>Built features aligned to complex customer and operational requirements.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card rounded-xl p-6">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-white">Software Engineer</h3>
+              <p class="text-[color:var(--teal)] font-medium">Forsys India Pvt Ltd</p>
+            </div>
+            <span class="timeline-date">Jan 2016 – Jul 2017</span>
+          </div>
+          <p class="text-gray-300 leading-relaxed">Built CPQ-based applications and backend capabilities that laid the foundation for later quote-to-cash and integration leadership.</p>
+          <div class="stack-line">
+            <span class="stack-pill">CPQ</span><span class="stack-pill">Pricing</span><span class="stack-pill">Configuration</span><span class="stack-pill">Apttus</span><span class="stack-pill">Backend Logic</span>
+          </div>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li>Worked on product configuration, pricing, and cart-related functionality.</li>
+            <li>Supported integrations and custom application behavior on Salesforce.</li>
+            <li>Contributed to scalable commerce and quoting workflows.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card rounded-xl p-6">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-white">Software Engineer</h3>
+              <p class="text-[color:var(--teal)] font-medium">Bodhtree Consulting Limited</p>
+            </div>
+            <span class="timeline-date">Apr 2014 – Dec 2015</span>
+          </div>
+          <p class="text-gray-300 leading-relaxed">Started building Salesforce applications, automation, and integrations while developing a strong foundation in CRM workflows and enterprise delivery.</p>
+          <div class="stack-line">
+            <span class="stack-pill">CRM</span><span class="stack-pill">Apex</span><span class="stack-pill">Integrations</span><span class="stack-pill">Automation</span><span class="stack-pill">Salesforce</span>
+          </div>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li>Built early automation and application capabilities on Salesforce.</li>
+            <li>Worked across CRM workflows, customization, and integration touchpoints.</li>
+            <li>Developed the technical base that shaped later architecture and leadership roles.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -153,13 +414,7 @@ By leveraging the Conga Advantage Platform’s modern architecture, the solution
     <!-- Platform Administrator -->
     <div class="cert-item flex items-center justify-between hover-glow transition">
       <span>Salesforce Certified Platform Administrator</span>
-      <div class="cert-hover flex items-center gap-2">
-        <img
-          src="badges/admin.png"
-          alt="Admin Badge"
-          class="badge hidden"
-        />
-        <span class="issued hidden text-sm text-gray-400">
+      <div class="cert-hover flex items-center gap-2"><span class="issued text-sm text-gray-400">
           Issued: Mar 2025
         </span>
       </div>
@@ -168,13 +423,7 @@ By leveraging the Conga Advantage Platform’s modern architecture, the solution
     <!-- Platform App Builder -->
     <div class="cert-item flex items-center justify-between hover-glow transition">
       <span>Salesforce Certified Platform App Builder</span>
-      <div class="cert-hover flex items-center gap-2">
-        <img
-          src="badges/appbuilder.png"
-          alt="App Builder Badge"
-          class="badge hidden"
-        />
-        <span class="issued hidden text-sm text-gray-400">
+      <div class="cert-hover flex items-center gap-2"><span class="issued text-sm text-gray-400">
           Issued: Mar 2021
         </span>
       </div>
@@ -183,13 +432,7 @@ By leveraging the Conga Advantage Platform’s modern architecture, the solution
     <!-- Platform Developer I -->
     <div class="cert-item flex items-center justify-between hover-glow transition">
       <span>Salesforce Certified Platform Developer I</span>
-      <div class="cert-hover flex items-center gap-2">
-        <img
-          src="badges/developer1.png"
-          alt="Developer I Badge"
-          class="badge hidden"
-        />
-        <span class="issued hidden text-sm text-gray-400">
+      <div class="cert-hover flex items-center gap-2"><span class="issued text-sm text-gray-400">
           Issued: Apr 2025
         </span>
       </div>
@@ -198,13 +441,7 @@ By leveraging the Conga Advantage Platform’s modern architecture, the solution
     <!-- Platform Developer II -->
     <div class="cert-item flex items-center justify-between hover-glow transition">
       <span>Salesforce Certified Platform Developer II</span>
-      <div class="cert-hover flex items-center gap-2">
-        <img
-          src="badges/developer2.png"
-          alt="Developer II Badge"
-          class="badge hidden"
-        />
-        <span class="issued hidden text-sm text-gray-400">
+      <div class="cert-hover flex items-center gap-2"><span class="issued text-sm text-gray-400">
           Issued: Mar 2021
         </span>
       </div>
@@ -213,13 +450,7 @@ By leveraging the Conga Advantage Platform’s modern architecture, the solution
     <!-- Sharing & Visibility Architect -->
     <div class="cert-item flex items-center justify-between hover-glow transition">
       <span>Salesforce Certified Sharing & Visibility Architect</span>
-      <div class="cert-hover flex items-center gap-2">
-        <img
-          src="badges/sharing_vis_arch.png"
-          alt="Sharing & Visibility Architect Badge"
-          class="badge hidden"
-        />
-        <span class="issued hidden text-sm text-gray-400">
+      <div class="cert-hover flex items-center gap-2"><span class="issued text-sm text-gray-400">
           Issued: Mar 2025
         </span>
       </div>
@@ -229,9 +460,9 @@ By leveraging the Conga Advantage Platform’s modern architecture, the solution
 
   <section id="resume" class="wrap-wide mx-auto px-6 py-12 md:py-16 text-center">
     <h2 class="reveal text-2xl md:text-3xl font-semibold mb-4 text-[color:var(--teal)] border-b border-gray-800 pb-2 inline-block" data-stagger="0">Resume</h2>
-    <p class="reveal text-gray-400 mb-6" data-stagger="1">Resume coming soon — updated version will be available shortly.</p>
-    <a class="reveal inline-flex items-center gap-2 text-gray-400 border border-gray-700 px-5 py-3 rounded-lg cursor-not-allowed select-none" data-stagger="2">
-      <i data-lucide="file-text"></i> View Resume
+    <p class="reveal text-gray-400 mb-6" data-stagger="1">Download my latest resume for detailed experience, leadership scope, and technical expertise.</p>
+    <a href="Rajeev_Ketha_Resume.pdf" download class="reveal inline-flex items-center gap-2 text-white bg-[color:var(--teal)] px-6 py-3 rounded-lg hover:opacity-90 transition" data-stagger="2">
+      <i data-lucide="download"></i> Download Resume
     </a>
   </section>
 
@@ -239,17 +470,17 @@ By leveraging the Conga Advantage Platform’s modern architecture, the solution
     <h2 class="reveal text-2xl md:text-3xl font-semibold mb-6 text-[color:var(--teal)] border-b border-gray-800 pb-2" data-stagger="0">Contact</h2>
     <div class="reveal flex flex-col md:flex-row justify-center gap-6 text-gray-300" data-stagger="1">
       <a href="mailto:rajeev.ketha@gmail.com" class="ticon hover:text-[color:var(--teal)]" data-tip="Email"><i data-lucide="mail"></i></a>
-      <a href="tel:+19452436265" class="ticon hover:text-[color:var(--teal)]" data-tip="Call"><i data-lucide="phone"></i></a>
+      <a href="tel:+16826821272" class="ticon hover:text-[color:var(--teal)]" data-tip="Call"><i data-lucide="phone"></i></a>
       <a href="https://www.linkedin.com/in/rajeev-ketha/" target="_self" class="ticon hover:text-[color:var(--teal)]" data-tip="LinkedIn"><i data-lucide="linkedin"></i></a>
     </div>
   </section>
 
   <footer class="wrap-wide mx-auto px-6 text-sm text-gray-500 pb-16">
     <div class="flex items-center justify-between gap-4 flex-col md:flex-row">
-      <p>© 2025 Rajeev Ketha • Built on GitHub Pages</p>
+      <p>© 2026 Rajeev Ketha • Built on GitHub Pages</p>
       <div class="flex items-center gap-4">
         <a href="mailto:rajeev.ketha@gmail.com" class="ticon hover:text-[color:var(--teal)]" data-tip="Email"><i data-lucide="mail"></i></a>
-        <a href="tel:+19452436265" class="ticon hover:text-[color:var(--teal)]" data-tip="Call"><i data-lucide="phone"></i></a>
+        <a href="tel:+16826821272" class="ticon hover:text-[color:var(--teal)]" data-tip="Call"><i data-lucide="phone"></i></a>
         <a href="https://www.linkedin.com/in/rajeev-ketha/" target="_self" class="ticon hover:text-[color:var(--teal)]" data-tip="LinkedIn"><i data-lucide="linkedin"></i></a>
       </div>
     </div>
@@ -258,8 +489,11 @@ By leveraging the Conga Advantage Platform’s modern architecture, the solution
   <button id="backTop" aria-label="Back to top" class="backtop" title="Back to top"><i data-lucide="arrow-up"></i></button>
 
   <script>
-    lucide.createIcons();
     window.addEventListener('load', () => { document.body.classList.add('ready'); });
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      window.lucide.createIcons();
+    }
+    setTimeout(() => document.body.classList.add('ready'), 300);
 
     // Reveal on scroll
     const obs = new IntersectionObserver((entries) => {
